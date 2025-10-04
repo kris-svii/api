@@ -1,0 +1,365 @@
+{
+	"id": "6919c805-f13d-4d3c-835b-0ee64fe5e205",
+	"name": "DemoShopping",
+	"timestamp": "2025-10-04T16:02:09.535Z",
+	"collection_id": "48855249-e850b8b0-7427-4efd-9504-b27832420ec0",
+	"folder_id": "48855249-a5a756c2-ec83-4af2-a757-ae4481d0a11f",
+	"environment_id": "48855249-313b441d-7a20-48da-8e7b-10fe85f4f10b",
+	"totalPass": 12,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-10-04T16:02:02.743Z",
+	"totalFail": 6,
+	"results": [
+		{
+			"id": "ee346c22-80c8-483b-a06d-9589350fed07",
+			"name": "Get all products - OK",
+			"url": "https://qa.demoshopping.ru/products",
+			"time": 1580,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"✅ Status code is 200": true,
+				"✅ Response time is less than 1500ms": false,
+				"✅ Response has valid JSON structure": false,
+				"✅ Products have valid data": false,
+				"✅ Save first product ID for future tests": true
+			},
+			"testPassFailCounts": {
+				"✅ Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"✅ Response time is less than 1500ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"✅ Response has valid JSON structure": {
+					"pass": 0,
+					"fail": 1
+				},
+				"✅ Products have valid data": {
+					"pass": 0,
+					"fail": 1
+				},
+				"✅ Save first product ID for future tests": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1580
+			],
+			"allTests": [
+				{
+					"✅ Status code is 200": true,
+					"✅ Response time is less than 1500ms": false,
+					"✅ Response has valid JSON structure": false,
+					"✅ Products have valid data": false,
+					"✅ Save first product ID for future tests": true
+				}
+			]
+		},
+		{
+			"id": "7e21f006-b317-4a63-ac56-e56a81593798",
+			"name": "Add product - OK",
+			"url": "https://qa.demoshopping.ru/add-product",
+			"time": 354,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"✅ Status code is 200": true,
+				"✅ Response time under 2 seconds": true,
+				"✅ Response exists": true,
+				"✅ Response contains success message": true,
+				"✅ Extract and save product ID": true,
+				"✅ Content-Type is text": true
+			},
+			"testPassFailCounts": {
+				"✅ Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"✅ Response time under 2 seconds": {
+					"pass": 1,
+					"fail": 0
+				},
+				"✅ Response exists": {
+					"pass": 1,
+					"fail": 0
+				},
+				"✅ Response contains success message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"✅ Extract and save product ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"✅ Content-Type is text": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				354
+			],
+			"allTests": [
+				{
+					"✅ Status code is 200": true,
+					"✅ Response time under 2 seconds": true,
+					"✅ Response exists": true,
+					"✅ Response contains success message": true,
+					"✅ Extract and save product ID": true,
+					"✅ Content-Type is text": true
+				}
+			]
+		},
+		{
+			"id": "68b90565-adba-4f78-8f3f-921375e10834",
+			"name": "Get product by ID - OK",
+			"url": "https://qa.demoshopping.ru/products/id/1?Content-Type= application/json",
+			"time": 309,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				309
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4ced51d9-6b76-4475-8088-73b9aad861b5",
+			"name": "Delete product by ID - OK",
+			"url": "https://qa.demoshopping.ru/products/id/22376?Content-Type=application/json&Authorization =krissvi",
+			"time": 300,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"✅ API connectivity": true,
+				"📝 Document API behavior": true,
+				"🔍 Functional status": true
+			},
+			"testPassFailCounts": {
+				"✅ API connectivity": {
+					"pass": 1,
+					"fail": 0
+				},
+				"📝 Document API behavior": {
+					"pass": 1,
+					"fail": 0
+				},
+				"🔍 Functional status": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				300
+			],
+			"allTests": [
+				{
+					"✅ API connectivity": true,
+					"📝 Document API behavior": true,
+					"🔍 Functional status": true
+				}
+			]
+		},
+		{
+			"id": "ce9c603f-86e9-437b-834b-63d3127f4d62",
+			"name": "Update product by ID - OK",
+			"url": "https://qa.demoshopping.ru/products/{id}",
+			"time": 228,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200 or 404": true,
+				"404 response indicates product not found": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200 or 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"404 response indicates product not found": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				228
+			],
+			"allTests": [
+				{
+					"Status code is 200 or 404": true,
+					"404 response indicates product not found": false
+				}
+			]
+		},
+		{
+			"id": "94d0441f-8459-48e2-8a17-c1a3887c5521",
+			"name": "PATCH product - OK",
+			"url": "https://qa.demoshopping.ru/products/id/22376",
+			"time": 334,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Only specified fields are updated": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Only specified fields are updated": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				334
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Only specified fields are updated": false
+				}
+			]
+		},
+		{
+			"id": "62a733e3-e0ee-4750-a223-0dc3d4ea80c8",
+			"name": "Find products by category - OK",
+			"url": "https://qa.demoshopping.ru/products/FindByCategory?category=Electronics",
+			"time": 295,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				295
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a755672b-20e3-4c0c-b0d1-c84f66fd58cb",
+			"name": "Find products by manufacturer - OK",
+			"url": "https://qa.demoshopping.ru/products/FindByManufacturer?manufacturer=Apple",
+			"time": 296,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				296
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a559a913-4fb5-4aa8-9b60-2398708ead04",
+			"name": "Find products with free shipping - OK",
+			"url": "https://qa.demoshopping.ru/products/FindByShipping?freeShipping=true",
+			"time": 360,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				360
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0fdebac3-24cc-4a18-a466-d2bb74cdc697",
+			"name": "Filter products - multiple parameters - OK",
+			"url": "https://qa.demoshopping.ru/products/filter?category= Electronics&manufacturer=Apple&freeShipping =truetrue&minPrice =500&maxPrice =2000",
+			"time": 398,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				398
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 4454,
+	"collection": {
+		"requests": [
+			{
+				"id": "ee346c22-80c8-483b-a06d-9589350fed07",
+				"method": "GET"
+			},
+			{
+				"id": "7e21f006-b317-4a63-ac56-e56a81593798",
+				"method": "POST"
+			},
+			{
+				"id": "68b90565-adba-4f78-8f3f-921375e10834",
+				"method": "GET"
+			},
+			{
+				"id": "4ced51d9-6b76-4475-8088-73b9aad861b5",
+				"method": "DELETE"
+			},
+			{
+				"id": "ce9c603f-86e9-437b-834b-63d3127f4d62",
+				"method": "PUT"
+			},
+			{
+				"id": "94d0441f-8459-48e2-8a17-c1a3887c5521",
+				"method": "PATCH"
+			},
+			{
+				"id": "62a733e3-e0ee-4750-a223-0dc3d4ea80c8",
+				"method": "GET"
+			},
+			{
+				"id": "a755672b-20e3-4c0c-b0d1-c84f66fd58cb",
+				"method": "GET"
+			},
+			{
+				"id": "a559a913-4fb5-4aa8-9b60-2398708ead04",
+				"method": "GET"
+			},
+			{
+				"id": "0fdebac3-24cc-4a18-a466-d2bb74cdc697",
+				"method": "GET"
+			}
+		]
+	}
+}
